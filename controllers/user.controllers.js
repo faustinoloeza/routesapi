@@ -70,7 +70,7 @@ const getUser = (req, res) => {
   if(id != null || id != undefined){
     res.json({
       message: "sds World",
-      name: "Jorge",
+      name: "Jorge el curioso",
       age: 25,
       id: id
     });
