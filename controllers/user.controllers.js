@@ -64,6 +64,26 @@ const getUsers = (req, res) => {
 };
 
 const getUser = (req, res) => {
+  const {id} = req.params;
+  console.log(id);
+
+  if(id != null || id != undefined){
+    res.json({
+      message: "sds World",
+      name: "Jorge",
+      age: 25,
+      id: id
+    });
+  }else{
+    res.json({
+      message: "SIN ID"
+    });
+  }
+
+};
+
+const postUser = (req, res) => {
+  const body = req.body;
   res.json({
     message: "Hello World",
     name: "Jorge",
@@ -80,12 +100,13 @@ const putUsers = (req, res) => {
 };
 
 const postUsers = (req, res) => {
-  let params = req.body;
-  console.log(params);
+  let {name, age} = req.body;
+
   res.json({
     message: "Hello World POST",
-    name: "Jorge",
-    age: 25,
+    name: name,
+    age: age,
+
   });
 };
 

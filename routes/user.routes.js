@@ -3,7 +3,8 @@ const userControllers = require('../controllers/user.controllers');
 const router = Router();
 
 
-router.get("/api", userControllers.getUsers);
+router.get("/api", userControllers.getUser);
+router.get("/api/:id", userControllers.getUser);
 router.get("/test", userControllers.getUser);
 router.get("/users", userControllers.getUsuarios);
 router.get("/users/:id", userControllers.getProducts);
